@@ -100,6 +100,84 @@ Ensure you have the following installed:
 ### 2. **Initialize the Truffle project**
 ```bash
 truffle init
+```
+
+### 3. **Install Dependencies**
+```bash
+npm i ganache
+```
+
+### 4. **Start Ganache in Terminal**
+```bash
+ganache
+```
+it will run at:
+Host: 127.0.0.1
+Port: 8545
+
+### 5. **Create contract**
+📜 Smart Contract: WaterBill.sol
+```bash
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract WaterBill {
+    struct User {
+        uint256 consumption; // in liters
+        uint256 billAmount;  // in wei
+    }
+
+    mapping(address => User) public users;
+    address public owner;
+    uint256 public ratePerLiter; // rate in wei per liter
+
+    event ConsumptionUpdated(address indexed user, uint256 consumption);
+    event BillPaid(address indexed user, uint256 amount);
+    event RateUpdated(uint256 newRate);
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not authorized");
+        _;
+    }
+
+    constructor(uint256 _initialRate) {
+        owner = msg.sender;
+        ratePerLiter = _initialRate;
+    }
+
+    function updateConsumption(address _user, uint256 _consumption) public onlyOwner {
+        require(_user != address(0), "Invalid address");
+        users[_user].consumption = _consumption;
+        users[_user].billAmount = _consumption * ratePerLiter;
+        emit ConsumptionUpdated(_user, _consumption);
+    }
+
+    function getBill(address _user) public view returns (uint256) {
+        return users[_user].billAmount;
+    }
+
+    function payBill() public payable {
+        uint256 bill = users[msg.sender].billAmount;
+        require(bill > 0, "No bill to pay");
+        require(msg.value >= bill, "Insufficient payment");
+
+        users[msg.sender].billAmount = 0;
+        emit BillPaid(msg.sender, msg.value);
+    }
+
+    function setRate(uint256 _rate) public onlyOwner {
+        ratePerLiter = _rate;
+        emit RateUpdated(_rate);
+    }
+
+    function withdraw() public onlyOwner {
+        payable(owner).transfer(address(this).balance);
+    }
+
+    receive() external payable {}
+}
+```
+
 
 
 ---
