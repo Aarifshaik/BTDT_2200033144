@@ -538,7 +538,7 @@ After running `truffle migrate`, the contract's **ABI** and **deployed address**
    ```  
 
 
-3. #### 5.Test Frontend-Backend Integration
+5. #### Test Frontend-Backend Integration
    - Start the React app:
       ```bash
       npm start
