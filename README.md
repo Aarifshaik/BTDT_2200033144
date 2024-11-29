@@ -64,4 +64,27 @@ Check out the detailed [Project Report](#) for insights into the architecture, w
 1. Clone this repository:  
    ```bash
    git clone https://github.com/Aarifshaik/BTDT_2200033144.git
-   
+
+## 🛠️ Install Dependencies
+
+2. Install dependencies:  
+   ```bash
+   npm install
+
+
+🌟 Future Scope
+📈 Historical Data: Track past consumption and payments.
+🖼️ Enhanced UI/UX: Make the interface even more engaging.
+📡 Live Deployment: Deploy the DApp to public blockchain networks like Ethereum or Polygon.
+🙌 Contributions
+We welcome contributions to enhance this project. Feel free to fork the repository, create a branch, and submit a pull request.
+
+📧 Contact
+If you have any questions or feedback, reach out at:
+📩 your-email@example.com
+
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+🌟 Don’t forget to star this repo if you find it helpful! 🌟
+
