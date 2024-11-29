@@ -101,7 +101,7 @@ We welcome contributions to improve and expand this project. Here's how you can 
 ## 📧 Contact
 
 Have questions or feedback? Feel free to reach out:  
-📩 **your-email@example.com**  
+📩 **skaarif.10@gmail.com**  
 
 ---
 
