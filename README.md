@@ -19,23 +19,23 @@ Explore how blockchain can transform utility management through this innovative 
 ## 🎥 **Demonstration Videos**
 Here’s everything you need to get started and understand how the project works:
 
-1. **🦊 [MetaMask Installation](#)**  
+1. **🦊 [MetaMask Installation](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/Install%20MetaMask.mkv)**  
    Step-by-step guide to installing MetaMask for interacting with the blockchain.
 
-2. **🍫 [Ganache Installation](#)**  
+2. **🍫 [Ganache Installation](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/Install%20Ganache.mkv)**  
    A walkthrough for setting up Ganache, your local blockchain simulator.
 
-3. **⚡ [Ether Transfer on Ganache](#)**  
+3. **⚡ [Ether Transfer on Ganache](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/Install%20Ganache.mkv)**  
    See how to transfer Ether between Ganache accounts using MetaMask.
 
-4. **🌐 [Ether Transfer on Sepolia Testnet](#)**  
+4. **🌐 [Ether Transfer on Sepolia Testnet](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/Install%20Ganache.mkv)**  
    Demonstrating how to perform transactions on the Sepolia test network.
 
-5. **💻 [Local Smart Contract Execution](#)**  
+5. **💻 [Local Smart Contract Execution](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/Install%20Ganache.mkv)**  
    A detailed demo of executing a smart contract using Ganache.
 
-6. **🔧 [DApp Electricity Bill Project Walkthrough](#)**  
-   A complete guide with code walkthrough and screenshots for building the Electricity Bill DApp.
+6. **🔧 [DApp Water Bill Project Walkthrough](#)**  
+   A complete guide with code walkthrough and screenshots for building the Water Bill DApp.
 
 ---
 
