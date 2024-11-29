@@ -262,6 +262,25 @@ truffle exec interact.js
 
 ---
 
+# 🚀 Post-Deployment Guide for Water Bill Management DApp
+
+After deploying the smart contract using `truffle migrate`, follow these steps to complete the setup for your frontend and backend integration.
+
+---
+
+## 1. **Locate the ABI and Deployed Contract Address**
+
+After running `truffle migrate`, the contract's **ABI** and **deployed address** will be automatically generated in the `build/contracts` directory.
+
+### Steps:
+1. Navigate to the generated JSON file:
+   ```bash
+   cd build/contracts
+
+   Locate WaterBill.json.
+
+---
+
 # 🌟 Future Scope
 
 - **📈 Historical Data**: Track past consumption and payments for better insights.  
