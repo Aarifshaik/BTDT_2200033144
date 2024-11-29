@@ -282,13 +282,38 @@ After running `truffle migrate`, the contract's **ABI** and **deployed address**
 2. #### Extract the ABI: Open WaterBill.json and copy the contents of the "abi" field. This is the ABI of your contract.
 
 3. #### Extract the Deployed Address:
-
-   ##### Check the console output from the truffle migrate command to find the deployed contract address.
-   ##### Alternatively, you can programmatically retrieve it using
+   * Check the console output from the truffle migrate command to find the deployed contract address.
+   * Alternatively, you can programmatically retrieve it using:
    ```bash
    truffle console
    WaterBill.deployed().then(instance => console.log(instance.address));
    ```
+
+## 2. **Frontend Project Creation**
+
+### Steps:
+1. #### Create a React project:
+   ```bash
+   npx create-react-app water-bill-dapp
+   cd water-bill-dapp
+   ```
+
+2. #### Install dependencies:
+   ```bash
+   npm install web3 @mui/material @emotion/react @emotion/styled
+   ```
+2. #### Add the contract's ABI and deployed address to your frontend.
+   Create a new file `src/WaterBillABI.js` in your React project to store the ABI and contract address.
+   ```bash
+   // WaterBillABI.js
+   export const WaterBillABI = [
+   /* Paste the ABI JSON array here */
+   ];
+
+   export const contractAddress = "0x..."; // Replace with the deployed contract address
+
+   ```
+   
 
 ---
 
