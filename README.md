@@ -65,17 +65,16 @@ Check out the detailed [Project Report](#) for insights into the architecture, w
    ```bash
    git clone https://github.com/Aarifshaik/BTDT_2200033144.git
 
-## 🛠️ Install Dependencies
-
 2. **Install Dependencies**: 
    ```bash
    npm install
 
-
 3. **Start Ganache**:  
    Launch Ganache to simulate a local blockchain environment.  
+   
 4. **Connect MetaMask**:  
    Connect your MetaMask wallet to the local blockchain network provided by Ganache.  
+
 5. **Run the Application**:  
    Start the DApp using the following command:  
    ```bash
