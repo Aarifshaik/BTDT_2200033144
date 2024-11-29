@@ -60,7 +60,7 @@ Check out the detailed [Project Report](https://github.com/Aarifshaik/BTDT_22000
 
 ---
 
-## 🎯 **How to Get Started**
+<!-- ## 🎯 **How to Get Started**
 1. Clone this repository:  
    ```bash
    git clone https://github.com/Aarifshaik/BTDT_2200033144.git
@@ -78,7 +78,31 @@ Check out the detailed [Project Report](https://github.com/Aarifshaik/BTDT_22000
 5. **Run the Application**:  
    Start the DApp using the following command:  
    ```bash
-   npm start
+   npm start -->
+
+# 🚰 Water Bill Management DApp
+
+This project is a blockchain-based DApp for tracking water consumption and managing water bill payments securely and efficiently. It includes a smart contract (`WaterBill.sol`), deployment scripts, and a React-based frontend.
+
+---
+
+## 🛠️ **Setup Instructions**
+
+### 1. **Install Prerequisites**
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [Truffle](https://www.trufflesuite.com/) (`npm install -g truffle`)
+- [Ganache](https://trufflesuite.com/ganache/)
+- [MetaMask](https://metamask.io/) (Browser Extension)
+
+---
+
+### 2. **Initialize the Truffle project**
+```bash
+truffle init
+
+
+---
 
 # 🌟 Future Scope
 
