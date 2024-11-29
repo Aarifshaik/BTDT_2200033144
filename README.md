@@ -67,24 +67,49 @@ Check out the detailed [Project Report](#) for insights into the architecture, w
 
 ## 🛠️ Install Dependencies
 
-2. Install dependencies:  
+2. **Install Dependencies**: 
    ```bash
    npm install
 
 
-🌟 Future Scope
-📈 Historical Data: Track past consumption and payments.
-🖼️ Enhanced UI/UX: Make the interface even more engaging.
-📡 Live Deployment: Deploy the DApp to public blockchain networks like Ethereum or Polygon.
-🙌 Contributions
-We welcome contributions to enhance this project. Feel free to fork the repository, create a branch, and submit a pull request.
+3. **Start Ganache**:  
+   Launch Ganache to simulate a local blockchain environment.  
+4. **Connect MetaMask**:  
+   Connect your MetaMask wallet to the local blockchain network provided by Ganache.  
+5. **Run the Application**:  
+   Start the DApp using the following command:  
+   ```bash
+   npm start
 
-📧 Contact
-If you have any questions or feedback, reach out at:
-📩 your-email@example.com
+# 🌟 Future Scope
 
-📝 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+- **📈 Historical Data**: Track past consumption and payments for better insights.  
+- **🖼️ Enhanced UI/UX**: Improve the interface for a more engaging user experience.  
+- **📡 Live Deployment**: Deploy the DApp on public blockchain networks like Ethereum or Polygon.  
 
-🌟 Don’t forget to star this repo if you find it helpful! 🌟
+---
 
+## 🙌 Contributions
+
+We welcome contributions to improve and expand this project. Here's how you can contribute:  
+
+1. Fork this repository.  
+2. Create a new branch for your feature or bug fix.  
+3. Submit a pull request for review.  
+
+---
+
+## 📧 Contact
+
+Have questions or feedback? Feel free to reach out:  
+📩 **your-email@example.com**  
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License. See the [LICENSE](#) file for more details.  
+
+---
+
+🌟 **If you found this project helpful, don't forget to star the repo!** 🌟
