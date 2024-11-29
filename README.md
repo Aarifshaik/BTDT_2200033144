@@ -95,28 +95,13 @@ Ensure you have the following installed:
 - [Ganache](https://trufflesuite.com/ganache/)
 - [MetaMask](https://metamask.io/) (Browser Extension)
 
----
-
 ### 2. **Initialize the Truffle project**
 ```bash
 truffle init
 ```
 
-### 3. **Install Dependencies**
-```bash
-npm i ganache
-```
-
-### 4. **Start Ganache in Terminal**
-```bash
-ganache
-```
-it will run at:
-Host: 127.0.0.1
-Port: 8545
-
-### 5. **Create contract**
-📜 Smart Contract: WaterBill.sol
+### 3. **📜 Smart Contract: WaterBill.sol**
+In /contracts create WaterBill.sol:
 ```bash
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -178,7 +163,102 @@ contract WaterBill {
 }
 ```
 
+### 4. **🔧 Deployment Script: 2_deploy_contracts.js**
+In migrations create 2_deploy_contracts.js:
+```bash
+const WaterBill = artifacts.require("WaterBill");
 
+module.exports = function (deployer) {
+  const initialRate = web3.utils.toWei("0.001", "ether"); // Initial rate: 0.001 ETH per liter
+  deployer.deploy(WaterBill, initialRate);
+};
+```
+
+### 5. **⚙️ Truffle Configuration: truffle-config.js**
+Configure the ganache and compiler in truffle-config.js
+```bash
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*", // Match any network ID
+    },
+  },
+  compilers: {
+    solc: {
+      version: "0.8.20", // Ensure compatibility with your Solidity version
+    },
+  },
+};
+```
+
+### 6. **📂 Interaction Script: interact.js**
+Create interact.js in root of project:
+```bash
+const WaterBill = artifacts.require("WaterBill");
+
+module.exports = async function (callback) {
+  try {
+    const instance = await WaterBill.deployed();
+    const accounts = await web3.eth.getAccounts();
+    const owner = accounts[0];
+    const userAddress = accounts[1];
+
+    console.log("Interacting with WaterBill contract...");
+
+    const newRate = web3.utils.toWei("0.002", "ether");
+    await instance.setRate(newRate, { from: owner });
+    console.log("New rate set!");
+
+    const consumption = 1000;
+    await instance.updateConsumption(userAddress, consumption, { from: owner });
+    console.log("Consumption updated!");
+
+    const bill = await instance.getBill(userAddress);
+    console.log(`Bill for ${userAddress}: ${web3.utils.fromWei(bill, "ether")} ETH`);
+
+    await instance.payBill({ from: userAddress, value: bill });
+    console.log("Bill paid!");
+
+    await instance.withdraw({ from: owner });
+    console.log("Funds withdrawn!");
+    callback();
+  } catch (error) {
+    console.error("Error:", error);
+    callback(error);
+  }
+};
+```
+
+### 7. **Install Dependencies**
+```bash
+npm i ganache
+```
+
+### 8. **Start Ganache in Terminal**
+```bash
+ganache
+```
+It will run at:
+Host: 127.0.0.1
+Port: 8545
+
+
+### 9. **Compile**
+```bash
+truffle compile
+```
+
+### 10. **Deploy**
+```bash
+truffle migrate
+```
+
+### 9. **Interact**
+```bash
+truffle exec interact.js
+```
 
 ---
 
