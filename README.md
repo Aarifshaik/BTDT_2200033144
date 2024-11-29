@@ -287,7 +287,7 @@ After running `truffle migrate`, the contract's **ABI** and **deployed address**
    ##### Alternatively, you can programmatically retrieve it using
    ```bash
    truffle console
-WaterBill.deployed().then(instance => console.log(instance.address));
+   WaterBill.deployed().then(instance => console.log(instance.address));
    ```
 
 ---
