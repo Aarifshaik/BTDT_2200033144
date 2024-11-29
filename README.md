@@ -273,11 +273,22 @@ After deploying the smart contract using `truffle migrate`, follow these steps t
 After running `truffle migrate`, the contract's **ABI** and **deployed address** will be automatically generated in the `build/contracts` directory.
 
 ### Steps:
-1. Navigate to the generated JSON file:
+1. #### Navigate to the generated JSON file:
    ```bash
    cd build/contracts
-
+   ```
    Locate WaterBill.json.
+
+2. #### Extract the ABI: Open WaterBill.json and copy the contents of the "abi" field. This is the ABI of your contract.
+
+3. #### Extract the Deployed Address:
+
+   ##### Check the console output from the truffle migrate command to find the deployed contract address.
+   ##### Alternatively, you can programmatically retrieve it using:
+            ```bash
+            truffle console
+            WaterBill.deployed().then(instance => console.log(instance.address));
+            ```
 
 ---
 
