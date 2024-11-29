@@ -536,6 +536,19 @@ After running `truffle migrate`, the contract's **ABI** and **deployed address**
 
    export default App;
    ```  
+
+
+3. #### 5.Test Frontend-Backend Integration
+   - Start the React app:
+      ```bash
+      npm start
+      ```
+   - Use the UI to test the following functionalities:
+      - Update the water rate.
+      - Update a user’s water consumption.
+      - Fetch a user's bill.
+      - Pay the bill.
+      - Withdraw funds as Owner
 ---
 
 # 🌟 Future Scope
