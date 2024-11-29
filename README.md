@@ -40,7 +40,7 @@ Here’s everything you need to get started and understand how the project works
 ---
 
 ## 📄 **Project Report**
-Check out the detailed [Project Report](#) for insights into the architecture, workflow, challenges, and future scope of the DApp. 
+Check out the detailed [Project Report](https://github.com/Aarifshaik/BTDT_2200033144/blob/main/2200033144_AquaLedger_Project_Report.pdf) for insights into the architecture, workflow, challenges, and future scope of the DApp. 
 
 ---
 
